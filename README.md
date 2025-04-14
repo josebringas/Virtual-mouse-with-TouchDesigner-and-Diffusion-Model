@@ -11,7 +11,7 @@ Maybe I haven't explain what TouchDesigner is, in case you're new to it, it's a 
 
 ![GIF_touchdesigner_01](https://github.com/user-attachments/assets/bed93029-cdb0-49a9-b77e-5a99084526bb)
 
-Stable Diffusion Plugin installed and working properly inside Touchdesigner
+Stable Diffusion Plugin installed and working properly inside Touchdesigner.
 
 ![GIF_03-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c5a4cd42-ca0a-4fa5-b384-29537bdf07f8)
 
