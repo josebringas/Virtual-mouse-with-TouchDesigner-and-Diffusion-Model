@@ -12,8 +12,7 @@ Maybe I haven't explain what TouchDesigner is, in case you're new to it, it's a 
 ![GIF_touchdesigner_01](https://github.com/user-attachments/assets/bed93029-cdb0-49a9-b77e-5a99084526bb)
 Stable Diffusion Plugin installed and working properly inside Touchdesigner
 
-
-https://github.com/user-attachments/assets/9470fa3b-da98-45b8-9b50-abdd193724f6
+![GIF_03-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c5a4cd42-ca0a-4fa5-b384-29537bdf07f8)
 early testings using OpenCV to enable gesture-driven features like mouse moving or clicking modes.
 
 
