@@ -10,13 +10,16 @@ Make sure to install all packages inside py to run successfully the scripts on y
 Maybe I haven't explain what TouchDesigner is, in case you're new to it, it's a realtime software that allows to create graphics that can be driven by data from multiple input sources (webcam, audio, sensors, etc). making it extremely flexible for content creation.
 
 ![GIF_touchdesigner_01](https://github.com/user-attachments/assets/bed93029-cdb0-49a9-b77e-5a99084526bb)
+
 Stable Diffusion Plugin installed and working properly inside Touchdesigner
 
 ![GIF_03-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c5a4cd42-ca0a-4fa5-b384-29537bdf07f8)
-early testings using OpenCV to enable gesture-driven features like mouse moving or clicking modes.
+
+Early testings using OpenCV to enable gesture-driven features like mouse moving or clicking modes.
 
 
 # Considerations:
 1. I'm running python version 3.8.0 because Mediapipe didn't seem to be running on later versions (at least for me).
 2. I'm using TouchDiffusion main version. I've tried to install the portable version but it simply won't run. Don't get discourage if either versions don't work properly at first. Reinstalling the main version seemed to work for me.
 3. In the -Mouse In- node inside TouchDesigner, you have to adapt the mouse screen values according to the extension of your screen. Check the min/max values for up/down and left/right edges and adjust acccordingly.
+4. I'm currently working on my own model training that will improve hand detection by adding dataset under different lighting conditions and hand/fingers poses.
