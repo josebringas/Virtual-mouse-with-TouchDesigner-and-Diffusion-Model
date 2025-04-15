@@ -1,4 +1,4 @@
-# Virtual-mouse-with-TouchDesigner-and-Diffusion-Model
+# Gesture-driven-animations-using-real-time-generative-ai
 Simulate virtual mouse clicks to interact with Touchdesigner while running a diffusion model plugin to re-generate existing animations.  
 
 Py file are ready to use, I've added notes inbetween the code explaining what is happening in case you wonder. (Else you can always ask your preferred AI chatbot about it ;)  
