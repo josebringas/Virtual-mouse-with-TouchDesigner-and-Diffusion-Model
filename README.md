@@ -61,7 +61,7 @@ The combination of authored animations, structured prompts, and reactive gesture
 * [TouchDiffusion by @olegchomp](https://github.com/olegchomp/TouchDiffusion)
 * [cvzone](https://github.com/cvzone/cvzone)
 * OpenCV, autopy, and TouchDesigner community
-* [Paketa12 on Youtube].(https://www.youtube.com/watch?v=w47xTWMNTFA&t)
+* [Paketa12 on Youtube](https://www.youtube.com/watch?v=w47xTWMNTFA&t)
 
 ## Considerations:
 1. I'm running python version 3.8.0 because Mediapipe didn't seem to be running on later versions (at least for me).
