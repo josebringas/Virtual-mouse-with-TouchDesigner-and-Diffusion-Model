@@ -34,7 +34,7 @@ This system implements a rule-based classifier using `cvzone.HandTrackingModule`
 * Zoom level control by measuring distance between both hands.
 * UDP data transmission of gestures states and zoom values to TouchDesigner.
 
-See code example in `gesture_control_mouse_zoom.py` (add this as a file to your repo).
+See code example in `VirtualMouse_GestureControl_v02.py` (add this as a file to your repo).
 
 ## Diffusion Image Generation
 We used [TouchDiffusion](https://github.com/olegchomp/TouchDiffusion), a real-time implementation of Stable Diffusion in TouchDesigner.
