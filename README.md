@@ -65,4 +65,5 @@ The combination of authored animations, structured prompts, and reactive gesture
 
 ## Considerations:
 1. I'm running python version 3.8.0 because Mediapipe didn't seem to be running on later versions (at least for me).
-2. I'm using TouchDiffusion main version. I've tried to install the portable version but it simply won't run. Don't get discourage if either versions don't work properly at first. Reinstalling the main version seemed to work for me.
+2. I'm using `TouchDiffusion` main version. I've tried to install the portable version but it simply won't run. Don't get discourage if either versions don't work properly at first. Reinstalling the main version seemed to work for me.
+3. The TouchDesigner file uploaded contains esential nodes for decoding coming data from OSC. However, I keep working on more recent versions for research purposes.
