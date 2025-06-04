@@ -1,25 +1,68 @@
-# Gesture-driven-animations-using-real-time-generative-ai
-Simulate virtual mouse clicks to interact with Touchdesigner while running a diffusion model plugin to re-generate existing animations.  
+# Gesture-Controlled Real-Time AI Animation
+Exhibited at the Art Gallery of Ontario, March 2025
 
-Py file are ready to use, I've added notes inbetween the code explaining what is happening in case you wonder. (Else you can always ask your preferred AI chatbot about it ;)  
+![ago-2](https://github.com/user-attachments/assets/6855c2f8-be48-4f7b-a03f-2973bc0dddc1)
 
-It's strongly recommended to follow a TouchDiffusion online tutorial to have it working inside TouchDesigner properly. I followed this one: https://www.youtube.com/watch?v=3WqUrWfCX1A&t  
+## Project Overview
+The Microscopic is a real-time generative AI system exhibited as a public video mapping installation. It merges multimodal user input with diffusion-based image generation to create immersive, reactive visuals. The project was designed to test how human gestures can condition and control AI imagery in live settings, using a custom pipeline that combines gesture recognition with a diffusion model conditioning.
 
-Make sure to install all packages inside py to run successfully the scripts on your preferred IDE. You can double-check those libraries in the py scripts provided.  
+![ago-3](https://github.com/user-attachments/assets/0373b508-839f-4453-a435-9c500e7eee41)
 
-Maybe I haven't explain what TouchDesigner is, in case you're new to it, it's a realtime software that allows to create graphics that can be driven by data from multiple input sources (webcam, audio, sensors, etc). making it extremely flexible for content creation.
+## Objectives
+* Explore gesture-based control as a creative input for AI visual systems.
+* Investigate image conditioning using predefined animations and structure-aware prompts.
+* Demonstrate live integration between user input and Stable Diffusion using the [TouchDiffusion](https://github.com/olegchomp/TouchDiffusion) plugin for TouchDesigner.
+
+## Gesture Control System
+This system implements a rule-based classifier using `cvzone.HandTrackingModule`, `OpenCV`, and `autopy` to translate webcam-captured hand landmarks into real-time interaction modes:
+
+## Modes Implemented:
+1. Virtual Mouse – Controls the mouse using the index fingertip position.
+2. Zoom Mode – Recognizes two-hand gestures to scale and reposition images.
+
+![ago-2-ezgif com-optimize](https://github.com/user-attachments/assets/f737ca69-64a9-4ec8-9107-a144e522c43d)
+
+## Key Libraries:
+* [cvzone](https://github.com/cvzone/cvzone)
+* OpenCV
+* autopy
+* socket (for UDP communication with TouchDesigner)
+
+## Code Features:
+* Smoothed pointer movement using interpolation.
+* click recognition based on hand pose (index + middle finger clse together).
+* Zoom level control by measuring distance between both hands.
+* UDP data transmission of gestures states and zoom values to TouchDesigner.
+
+See code example in `gesture_control_mouse_zoom.py` (add this as a file to your repo).
+
+## Diffusion Image Generation
+We used [TouchDiffusion](https://github.com/olegchomp/TouchDiffusion), a real-time implementation of Stable Diffusion in TouchDesigner.
+
+## Conditioning Strategy
+* Noise Map: The default randomness input.
+* Author-Controlled RGB Animation: A high contrast particle-based animation was used as a second conditioning map. This helped the model "preserve the structure" while allowing creative variation.
+* Gesture Input: Gestures sent via UDp dynamically transformed or influenced the diffusion parameters during runtime.
 
 ![GIF_touchdesigner_01](https://github.com/user-attachments/assets/bed93029-cdb0-49a9-b77e-5a99084526bb)
 
-Stable Diffusion Plugin installed and working properly inside Touchdesigner.
+This conditioning approach allowed the diffusion model to maintain coherence with the structured reference (e.g., particle animations) while introducing stylistic variation bassed on the noise.
 
-![GIF_03-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c5a4cd42-ca0a-4fa5-b384-29537bdf07f8)
+![PXL_20250604_025615794 (1)](https://github.com/user-attachments/assets/8947c587-2d1f-42e7-8f1b-b48e33d15a3c)
 
-Early testings using OpenCV to enable gesture-driven features like mouse moving or clicking modes.
+## Future Possibilities
+While The Microscopic was designed as a standalone installation, its architecture opens doors to future uses in:
+* Theater and Live Performance (gesture-driven control of VFX, lighting, sound)
+* Prototype testing for multimodal AI interaction
+* Creative gaming and memory-based physical interaction systems
+The combination of authored animations, structured prompts, and reactive gesture input makes this system ideal for immersive, performative applications!
 
+## Acknowledgments
+* [TouchDiffusion by @olegchomp](https://github.com/olegchomp/TouchDiffusion)
+* [cvzone](https://github.com/cvzone/cvzone)
+* OpenCV, autopy, and TouchDesigner community
+* [Paketa12 on Youtube].(https://www.youtube.com/watch?v=w47xTWMNTFA&t)
 
-# Considerations:
+## Considerations:
 1. I'm running python version 3.8.0 because Mediapipe didn't seem to be running on later versions (at least for me).
 2. I'm using TouchDiffusion main version. I've tried to install the portable version but it simply won't run. Don't get discourage if either versions don't work properly at first. Reinstalling the main version seemed to work for me.
-3. In the -Mouse In- node inside TouchDesigner, you have to adapt the mouse screen values according to the extension of your screen. Check the min/max values for up/down and left/right edges and adjust acccordingly.
-4. I'm currently working on my own model training that will improve hand detection by adding dataset under different lighting conditions and hand/fingers poses.
