@@ -55,6 +55,7 @@ While The Microscopic was designed as a standalone installation, its architectur
 * Theater and Live Performance (gesture-driven control of VFX, lighting, sound)
 * Prototype testing for multimodal AI interaction
 * Creative gaming and memory-based physical interaction systems
+
 The combination of authored animations, structured prompts, and reactive gesture input makes this system ideal for immersive, performative applications!
 
 ## Acknowledgments
