@@ -3,7 +3,7 @@ Exhibited at the Art Gallery of Ontario, March 2025
 
 ![ago-2](https://github.com/user-attachments/assets/6855c2f8-be48-4f7b-a03f-2973bc0dddc1)
 
-HEADSUP: This project is in constant iteration. Mainly for the CVZone-Python side. Latest iteration includes a gesture rule classifier that switches from one text-prompt to another inside TD. (TouchDesigner file update not included)
+HEADS UP: This project is in constant iteration. Mainly for the CVZone-Python side. Latest py iteration includes a gesture rule classifier snippet that switches from one text-prompt to another inside TD. (TouchDesigner file update not included yet).
 
 ## Project Overview
 The Microscopic is a real-time generative AI system exhibited as a public video mapping installation. It merges multimodal user input with diffusion-based image generation to create immersive, reactive visuals. The project was designed to test how human gestures can condition and control AI imagery in live settings, using a custom pipeline that combines gesture recognition with a diffusion model conditioning.
